@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFy | Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card glass">
+            <h1>Crie sua conta <span class="gradient-text">DevFy</span></h1>
+            <p class="subtitle">Rede exclusiva para nosso grupo</p>
+            
+            <div class="user-counter">
+                <i class="fas fa-users"></i>
+                <span id="registeredUsers">0</span>/6 usuários
+            </div>
+            
+            <div class="avatar-upload" onclick="document.getElementById('fileInput').click()">
+                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                <div class="avatar-preview" id="avatarPreview">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <p>Clique para adicionar foto</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="username">@username</label>
+                <input type="text" id="username" placeholder="ex: @devmaster">
+            </div>
+            
+            <!-- Campos de senha adicionados -->
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Crie uma senha">
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">Confirmar Senha</label>
+                <input type="password" id="confirmPassword" placeholder="Repita sua senha">
+            </div>
+            
+            <div id="errorMessage" class="error-message"></div>
+            
+            <button class="auth-btn" onclick="criarConta()">
+                <i class="fas fa-rocket"></i> Entrar no DevFy
+            </button>
+
+            <!-- Link para login adicionado -->
+            <p class="auth-link">Já tem conta? <a href="login.html">Faça login</a></p>
+        </div>
+    </div>
+
+    <!-- Efeitos de fundo -->
+    <div class="bg-animation">
+        <div class="bubble" style="width: 200px; height: 200px; top: 20%; left: 10%;"></div>
+        <div class="bubble" style="width: 150px; height: 150px; top: 60%; left: 80%;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

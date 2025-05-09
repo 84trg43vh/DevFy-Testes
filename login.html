@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFy | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card glass">
+            <h1>Login <span class="gradient-text">DevFy</span></h1>
+            <p class="subtitle">Acesse sua conta exclusiva</p>
+            
+            <div class="form-group">
+                <label for="loginUsername">@username</label>
+                <input type="text" id="loginUsername" placeholder="@seuusuario">
+            </div>
+            
+            <div class="form-group">
+                <label for="loginPassword">Senha</label>
+                <input type="password" id="loginPassword" placeholder="Sua senha">
+            </div>
+            
+            <div id="loginError" class="error-message"></div>
+            
+            <button class="auth-btn" onclick="fazerLogin()">
+                <i class="fas fa-sign-in-alt"></i> Entrar
+            </button>
+            
+            <p class="auth-link">Não tem conta? <a href="signup.html">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <!-- Efeitos de fundo -->
+    <div class="bg-animation">
+        <div class="bubble" style="width: 200px; height: 200px; top: 20%; left: 10%;"></div>
+        <div class="bubble" style="width: 150px; height: 150px; top: 60%; left: 80%;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

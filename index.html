@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFy Ultra | Feed Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Adicione isso dentro da tag <body>, preferencialmente no início -->
+<div class="logout-container">
+    <button class="logout-btn" onclick="logout()" title="Sair da conta">
+        <i class="fas fa-sign-out-alt"></i>
+    </button>
+</div> 
+
+    <div class="app-container">
+        <!-- Sidebar Premium -->
+        <aside class="sidebar glass">
+            <div class="logo">DevFy</div>
+
+            <div class="user-card">
+                <div class="avatar" id="sidebarAvatar">
+                    <img id="userAvatarImg" src="" alt="User">
+                </div>
+                <div class="user-info">
+                    <h3 id="sidebarUsername">@usuário</h3>
+                    <p class="user-count"><span id="currentUsers">0</span>/6 membros</p>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" onclick="focusTextarea()">
+                <i class="fas fa-plus"></i> Novo Post
+            </button>
+
+            <div class="news-section">
+                <h4><i class="fas fa-bullhorn"></i> Fofocas VIP</h4>
+                <div id="newsContainer" class="news-container"></div>
+            </div>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="content">  
+            
+            <!-- Criar Post -->
+          <div class="post-creator">
+          <textarea id="postText" placeholder="Compartilhe algo incrível..."></textarea>
+          <button class="btn btn-primary" onclick="postar()">
+          <i class="fas fa-paper-plane"></i> Publicar
+          </button>
+       </div>
+
+            <!-- Feed de Posts -->
+            <div id="postsContainer" class="posts"></div>
+        </main>
+    </div>
+
+    <!-- Painel Admin -->
+    <div id="adminPanel" class="admin-panel glass">
+        <div class="admin-header">
+            <h3><i class="fas fa-user-shield"></i> Painel Admin</h3>
+            <button class="admin-close" onclick="toggleAdminPanel()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="admin-section">
+            <h4><i class="fas fa-newspaper"></i> Editar Fofocas VIP</h4>
+            <textarea id="newsEditor" rows="5" placeholder="Uma fofoca por linha..."></textarea>
+            <button class="btn btn-admin" onclick="updateNews()">
+                <i class="fas fa-save"></i> Salvar Fofocas
+            </button>
+        </div>
+        
+        <div class="admin-section">
+            <h4><i class="fas fa-user-slash"></i> Gerenciamento</h4>
+            <div class="admin-control">
+                <input type="text" id="banUsername" placeholder="@username">
+                <button class="btn btn-admin" onclick="banUser()">
+                    <i class="fas fa-ban"></i> Banir
+                </button>
+            </div>
+            <button class="btn btn-danger" onclick="resetAllUsers()">
+                <i class="fas fa-trash-alt"></i> Resetar Todos Usuários
+            </button>
+        </div>
+    </div>
+
+    <div id="adminOverlay" class="admin-overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
